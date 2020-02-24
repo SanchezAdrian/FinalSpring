@@ -4,7 +4,7 @@ public class constantes {
 	public static final String CICLISTAS_VIEW="ListaCiclistas";
 	public static final String CREATECI_VIEW="CreateCiclistas";
 	public static final String DETAILCI_VIEW="DetailCiclistas";
-	public static final String LOGIN_VIEW="login";	
+	public static final String LOGIN_VIEW="Login";	
 	public static final String EQUIPOS_VIEW="ListaEquipos";
 	public static final String CREATEEQ_VIEW="CreateEquipos";
 	public static final String ETAPAS_VIEW="ListaEtapas";
