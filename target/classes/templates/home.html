@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Ciclistas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+     	<link rel="stylesheet" href="/css/navbar.css">
+    <!-- <link rel="stylesheet" href="../css/shards.min.css"> -->
+</head>
+
+
+  <body >
+        	
+    <div class="container-fluid bg-dark text-white">
+
+      
+        <h1>Pagina de ciclistas</h1>
+                <ul class="list-group" >
+ 
+            <li class="list-group-item list-group-item-primary" >
+                <a th:href="@{/ciclistas/listaCiclistas}">Ciclistas</a>
+            </li>
+            <li class="list-group-item list-group-item-light"> 
+                <a th:href="@{/ciclistas/listaEquipos}">Equipos</a>
+            </li>
+            <li class="list-group-item list-group-item-primary"> 
+               <a th:href="@{/ciclistas/listaEtapas}">Etapas</a>
+            </li>
+             <li class="list-group-item list-group-item-light">
+               <a th:href="@{/ciclistas/listaMaillots}">Maillots</a>
+            </li>
+            <li class="list-group-item list-group-item-primary">
+                <a th:href="@{/ciclistas/listaPuertos}">Puertos</a>
+            </li>
+              <li class="list-group-item list-group-item-light">
+                <a th:href="@{/ciclistas/listaGanadores}">Inscritos</a>
+            </li>
+              <li class="list-group-item list-group-item-primary">
+              <label>Noticias: </label>
+               <select class="form-control" id="nw" name="nw">
+                               				<option th:each="n : ${noticias}" th:value="${n.id}" th:text="${n.nombre}"></option>
+                              				 </select>
+                         <a th:href="@{/ciclistas/createNews}">Añadir noticia</a>
+            </li>
+        </ul>
+
+     
+
+    </div>
+
+
+ 
+  </body>
+</html>
