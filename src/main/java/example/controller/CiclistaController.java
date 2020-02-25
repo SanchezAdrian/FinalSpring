@@ -102,7 +102,7 @@ public class CiclistaController {
 	
 
 	
-	@PreAuthorize("hasRole('ROLE_ADMIN') OR hasRole('ROLE_TEAM')")
+	@PreAuthorize("hasRole('ROLE_USER') OR hasRole('ROLE_TEAM')")
 	@GetMapping("/createCiclistas")
 	public ModelAndView createCiclista() {
 		ModelAndView mav=new ModelAndView(constantes.CREATECI_VIEW);
@@ -153,7 +153,7 @@ public class CiclistaController {
 		return mav;
 	}
 	
-	@PreAuthorize("hasRole('ROLE_ADMIN')")
+	@PreAuthorize("hasRole('ROLE_ADMIN') OR hasRole('ROLE_TEAM')")
 	@RequestMapping("/rmCiclistas/{id}")
 	public ModelAndView tmCiclista(@PathVariable("id") int id) {
 		ModelAndView mav = new ModelAndView("EditCiclistas");
@@ -167,7 +167,7 @@ public class CiclistaController {
 		return mav;
 	}
 	
-	@PreAuthorize("hasRole('ROLE_ADMIN')")
+	@PreAuthorize("hasRole('ROLE_ADMIN') OR hasRole('ROLE_TEAM')")
 	@PostMapping("/updateCiclistas")
 	public ModelAndView updateCiclista(@RequestParam(name="newDorsal")int newDorsal,RedirectAttributes flash,@RequestParam("file") MultipartFile foto,@RequestParam(name="eq") String eq, @ModelAttribute("ciclista") CiclistaModel ciclistaModel) {
 		ModelAndView mav=new ModelAndView(constantes.CICLISTAS_VIEW);
