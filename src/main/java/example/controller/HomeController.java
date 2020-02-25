@@ -3,6 +3,7 @@ package example.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -11,7 +12,7 @@ import example.converter.NewsConverter;
 import example.service.NewsService;
 
 @Controller
-@RequestMapping("/")
+@RequestMapping("/ciclistas")
 public class HomeController {
 	
 	@Autowired
@@ -23,7 +24,7 @@ public class HomeController {
 	private NewsService newsService;
 	
 	
-	@RequestMapping("/")
+	@GetMapping("/home")
 	public ModelAndView home() {
 		ModelAndView mav = new ModelAndView(constantes.HOME);
 		

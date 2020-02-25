@@ -5,12 +5,12 @@ import example.entity.UserCredential;
 public class UserRoleModel {
 
 	private Integer userRoleId;
-	private UserCredential userCredential;
+	private UserCredentialModel userCredential;
 	private String role;
 	
 	public UserRoleModel() {}
 
-	public UserRoleModel(Integer userRoleId, UserCredential userCredential, String role) {
+	public UserRoleModel(Integer userRoleId, UserCredentialModel userCredential, String role) {
 		super();
 		this.userRoleId = userRoleId;
 		this.userCredential = userCredential;
@@ -25,11 +25,11 @@ public class UserRoleModel {
 		this.userRoleId = userRoleId;
 	}
 
-	public UserCredential getUserCredential() {
+	public UserCredentialModel getUserCredential() {
 		return userCredential;
 	}
 
-	public void setUserCredential(UserCredential userCredential) {
+	public void setUserCredential(UserCredentialModel userCredential) {
 		this.userCredential = userCredential;
 	}
 

@@ -11,4 +11,5 @@ public interface UserService {
 	public abstract UserCredential addUsuario(UserCredentialModel userCredentialModel);
 
 
+
 }
