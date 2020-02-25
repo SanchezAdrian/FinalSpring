@@ -69,7 +69,7 @@ public class CiclistaController {
 		return mav;
 	}
 	
-	@PreAuthorize("hasRole('ROLE_ADMIN') OR hasRole('ROLE_TEAM')")
+	@PreAuthorize("hasRole('ROLE_USER') OR hasRole('ROLE_TEAM')")
 	@PostMapping("/addCiclistas")
 	public ModelAndView addCiclista(RedirectAttributes flash,@RequestParam("file") MultipartFile foto,@RequestParam(name="eq") String eq, @ModelAttribute("ciclista") CiclistaModel ciclistaModel) {
 		ModelAndView mav=new ModelAndView(constantes.CICLISTAS_VIEW);
